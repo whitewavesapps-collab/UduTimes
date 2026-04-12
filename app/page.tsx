@@ -6,6 +6,7 @@ import { TrendingBento } from '@/components/TrendingBento';
 import { LatestNews } from '@/components/LatestNews';
 import { Footer } from '@/components/Footer';
 import { BottomNav } from '@/components/BottomNav';
+import { ScrollToTop } from '@/components/ScrollToTop';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Footer />
       </main>
       <BottomNav />
+      <ScrollToTop />
     </>
   );
 }
