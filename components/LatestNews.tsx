@@ -55,15 +55,17 @@ export function LatestNews() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0b3d91]"></span>
-                <span className="font-[family-name:var(--font-work-sans)] text-[10px] font-bold text-slate-500 uppercase">{article.category}</span>
+              <div className="flex-1 flex flex-col justify-between h-24">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b3d91]"></span>
+                  <span className="font-[family-name:var(--font-work-sans)] text-[10px] font-bold text-slate-500 uppercase">{article.category}</span>
+                </div>
+                <h4 className="font-[family-name:var(--font-public-sans)] font-bold text-lg text-[#1a1c1e] hover:text-[#002869] cursor-pointer line-clamp-2">
+                  {article.title}
+                </h4>
               </div>
-              <h4 className="font-[family-name:var(--font-public-sans)] font-bold text-lg text-[#1a1c1e] hover:text-[#002869] cursor-pointer">
-                {article.title}
-              </h4>
-              <div className="mt-2 text-xs text-slate-400 font-[family-name:var(--font-work-sans)]">
+              <div className="text-xs text-slate-400 font-[family-name:var(--font-work-sans)] mt-auto">
                 {article.timestamp} • {getReadTime(article.content)} min read
               </div>
             </div>

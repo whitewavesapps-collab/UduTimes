@@ -69,17 +69,17 @@ export function TopStories() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-2xl mx-auto">
         {/* Large Card */}
         {largeStory && (
-          <article className="bg-white p-2 rounded-xl shadow-sm">
+          <article className="bg-white rounded-xl shadow-sm overflow-hidden">
             <div className="relative w-full h-64 mb-6">
               <Image
                 src={largeStory.imageSrc}
                 alt={largeStory.imageAlt}
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="px-4 pb-6">
+            <div className="px-6 pb-6">
               <span className="font-[family-name:var(--font-work-sans)] text-xs font-semibold text-[#735c00] uppercase tracking-widest block mb-2">
                 {largeStory.category}
               </span>
@@ -89,7 +89,7 @@ export function TopStories() {
               <p className="font-[family-name:var(--font-public-sans)] text-slate-600 mb-4 line-clamp-2">
                 {largeStory.description}
               </p>
-              <div className="flex items-center gap-3 font-[family-name:var(--font-work-sans)] text-xs text-slate-400">
+              <div className="flex items-center gap-3 font-[family-name:var(--font-work-sans)] text-xs text-slate-400 mt-auto">
                 <span>{largeStory.tag}</span>
                 <span>•</span>
                 <span>{largeStory.timestamp} • {getReadTime(largeStory.content)} min read</span>
@@ -101,7 +101,7 @@ export function TopStories() {
         <div className="space-y-8">
           {/* Medium Cards */}
           {mediumStories.map((story) => (
-            <article key={story.id} className="flex gap-4 items-start group">
+            <article key={story.id} className="flex gap-4 items-stretch group">
               <div className="w-1/3 flex-shrink-0 relative aspect-square">
                 <Image
                   src={story.imageSrc}
@@ -111,14 +111,16 @@ export function TopStories() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="flex-1">
-                <span className="font-[family-name:var(--font-work-sans)] text-[10px] font-bold text-[#0b3d91] uppercase mb-1 block">
-                  {story.category}
-                </span>
-                <h4 className="font-[family-name:var(--font-newsreader)] text-lg font-bold leading-tight text-[#1a1c1e] group-hover:text-[#002869] transition-colors">
-                  {story.title}
-                </h4>
-                <div className="mt-2 text-xs text-slate-400 font-[family-name:var(--font-work-sans)]">
+              <div className="flex-1 flex flex-col justify-between py-1">
+                <div>
+                  <span className="font-[family-name:var(--font-work-sans)] text-[10px] font-bold text-[#0b3d91] uppercase mb-1 block">
+                    {story.category}
+                  </span>
+                  <h4 className="font-[family-name:var(--font-newsreader)] text-lg font-bold leading-tight text-[#1a1c1e] group-hover:text-[#002869] transition-colors line-clamp-3">
+                    {story.title}
+                  </h4>
+                </div>
+                <div className="text-xs text-slate-400 font-[family-name:var(--font-work-sans)] mt-auto">
                   {story.timestamp} • {getReadTime(story.content)} min read
                 </div>
               </div>
