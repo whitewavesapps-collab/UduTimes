@@ -39,7 +39,7 @@ export function ScrollToTop() {
           className="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-50 p-3 bg-[#0b3d91] text-white rounded-full shadow-[0_8px_32px_rgba(26,28,30,0.15)] hover:bg-[#002869] transition-colors focus:outline-none focus:ring-2 focus:ring-[#ffe088] focus:ring-offset-2"
           aria-label="Scroll to top"
         >
-          <ArrowUp className="w-6 h-6" />
+          <ArrowUp className="w-6 h-6" aria-hidden="true" />
         </motion.button>
       )}
     </AnimatePresence>

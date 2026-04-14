@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Hero() {
   return (
@@ -20,9 +21,11 @@ export function Hero() {
             Editorial Exclusive
           </span>
         </div>
-        <h2 className="font-[family-name:var(--font-newsreader)] text-4xl md:text-6xl text-white leading-tight font-bold italic mb-4">
-          The Deep Delta: Uncovering the Forgotten Waterways of Southern Nigeria.
-        </h2>
+        <Link href="/article" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm inline-block mb-4">
+          <h2 className="font-[family-name:var(--font-newsreader)] text-4xl md:text-6xl text-white leading-tight font-bold italic hover:text-slate-200 transition-colors">
+            The Deep Delta: Uncovering the Forgotten Waterways of Southern Nigeria.
+          </h2>
+        </Link>
         <p className="font-[family-name:var(--font-public-sans)] text-slate-200 text-lg max-w-xl mb-6 line-clamp-3">
           A deep-dive investigative report into the shifting ecosystems and the resilient communities living along the historic Escravos River.
         </p>

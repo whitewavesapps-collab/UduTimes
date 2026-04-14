@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TOP_STORIES = [
   {
@@ -62,7 +63,7 @@ export function TopStories() {
           <h3 className="font-[family-name:var(--font-newsreader)] text-3xl font-bold text-[#002869]">Top Stories</h3>
           <div className="h-1 w-12 bg-[#735c00] mt-2"></div>
         </div>
-        <button className="font-[family-name:var(--font-work-sans)] text-sm text-[#0b3d91] font-bold hover:underline">
+        <button className="font-[family-name:var(--font-work-sans)] text-sm text-[#0b3d91] font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b3d91] rounded-sm px-1">
           View Section
         </button>
       </div>
@@ -83,13 +84,15 @@ export function TopStories() {
               <span className="font-[family-name:var(--font-work-sans)] text-xs font-semibold text-[#735c00] uppercase tracking-widest block mb-2">
                 {largeStory.category}
               </span>
-              <h4 className="font-[family-name:var(--font-newsreader)] text-2xl font-bold leading-snug mb-3 text-[#1a1c1e]">
-                {largeStory.title}
-              </h4>
+              <Link href="/article" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm inline-block mb-3">
+                <h4 className="font-[family-name:var(--font-newsreader)] text-xl font-bold leading-tight text-[#1a1c1e] hover:text-[#002869] transition-colors">
+                  {largeStory.title}
+                </h4>
+              </Link>
               <p className="font-[family-name:var(--font-public-sans)] text-slate-600 mb-4 line-clamp-2">
                 {largeStory.description}
               </p>
-              <div className="flex items-center gap-3 font-[family-name:var(--font-work-sans)] text-xs text-slate-400 mt-auto">
+              <div className="flex items-center gap-3 font-[family-name:var(--font-work-sans)] text-xs text-slate-500 mt-auto">
                 <span>{largeStory.tag}</span>
                 <span>•</span>
                 <span>{largeStory.timestamp} • {getReadTime(largeStory.content)} min read</span>
@@ -116,11 +119,13 @@ export function TopStories() {
                   <span className="font-[family-name:var(--font-work-sans)] text-[10px] font-bold text-[#0b3d91] uppercase mb-1 block">
                     {story.category}
                   </span>
-                  <h4 className="font-[family-name:var(--font-newsreader)] text-lg font-bold leading-tight text-[#1a1c1e] group-hover:text-[#002869] transition-colors line-clamp-3">
-                    {story.title}
-                  </h4>
+                  <Link href="/article" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm">
+                    <h4 className="font-[family-name:var(--font-newsreader)] text-base font-bold leading-tight text-[#1a1c1e] group-hover:text-[#002869] transition-colors line-clamp-3">
+                      {story.title}
+                    </h4>
+                  </Link>
                 </div>
-                <div className="text-xs text-slate-400 font-[family-name:var(--font-work-sans)] mt-auto">
+                <div className="text-xs text-slate-500 font-[family-name:var(--font-work-sans)] mt-auto">
                   {story.timestamp} • {getReadTime(story.content)} min read
                 </div>
               </div>

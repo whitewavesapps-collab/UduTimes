@@ -10,9 +10,15 @@ export function Footer() {
             Delta State&apos;s premier digital chronicle. Delivering truth, authority, and regional insight since 1998.
           </p>
           <div className="flex gap-4">
-            <BarChart2 className="text-[#0b3d91] w-6 h-6" />
-            <Share2 className="text-[#0b3d91] w-6 h-6" />
-            <Mail className="text-[#0b3d91] w-6 h-6" />
+            <a href="#" aria-label="Analytics" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-md p-1">
+              <BarChart2 className="text-[#0b3d91] w-6 h-6" aria-hidden="true" />
+            </a>
+            <a href="#" aria-label="Share" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-md p-1">
+              <Share2 className="text-[#0b3d91] w-6 h-6" aria-hidden="true" />
+            </a>
+            <a href="#" aria-label="Contact via Email" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-md p-1">
+              <Mail className="text-[#0b3d91] w-6 h-6" aria-hidden="true" />
+            </a>
           </div>
         </div>
         <div>
@@ -20,11 +26,11 @@ export function Footer() {
             Navigation
           </h5>
           <div className="grid grid-cols-2 gap-y-2">
-            <a className="text-slate-500 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)]" href="#">About Us</a>
-            <a className="text-slate-500 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)]" href="#">Contact</a>
-            <a className="text-slate-500 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)]" href="#">Privacy Policy</a>
-            <a className="text-slate-500 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)]" href="#">Advertise</a>
-            <a className="text-slate-500 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)]" href="#">Terms of Service</a>
+            <a className="text-slate-600 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm" href="#">About Us</a>
+            <a className="text-slate-600 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm" href="#">Contact</a>
+            <a className="text-slate-600 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm" href="#">Privacy Policy</a>
+            <a className="text-slate-600 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm" href="#">Advertise</a>
+            <a className="text-slate-600 hover:text-[#002869] text-sm font-[family-name:var(--font-work-sans)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm" href="#">Terms of Service</a>
           </div>
         </div>
         <div>
@@ -36,18 +42,19 @@ export function Footer() {
           </p>
           <div className="flex">
             <input
-              className="bg-white border-none focus:ring-1 focus:ring-[#002869] text-sm px-4 py-2 w-full rounded-l-lg outline-none"
+              className="bg-white border border-slate-300 focus:ring-2 focus:ring-[#002869] text-sm px-4 py-2 w-full rounded-l-lg outline-none"
               placeholder="Email address"
               type="email"
+              aria-label="Email address for newsletter"
             />
-            <button className="bg-[#002869] text-white px-4 py-2 rounded-r-lg font-[family-name:var(--font-work-sans)] text-xs font-bold">
+            <button className="bg-[#002869] text-white px-4 py-2 rounded-r-lg font-[family-name:var(--font-work-sans)] text-xs font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#002869]">
               Join
             </button>
           </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200/50">
-        <p className="text-slate-400 text-xs font-[family-name:var(--font-work-sans)] text-center">
+        <p className="text-slate-500 text-xs font-[family-name:var(--font-work-sans)] text-center">
           © 2024 UduTimes Media Group. All Rights Reserved.
         </p>
       </div>

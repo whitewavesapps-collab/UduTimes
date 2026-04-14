@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 const TRENDING_NOW = [
   {
@@ -57,10 +58,12 @@ export function TrendingBento() {
                     />
                   </div>
                   <div className="flex flex-col justify-between h-16">
-                    <p className="font-[family-name:var(--font-public-sans)] text-sm font-semibold hover:text-[#002869] cursor-pointer transition-colors line-clamp-2">
-                      {item.title}
-                    </p>
-                    <div className="text-[10px] text-slate-400 font-[family-name:var(--font-work-sans)] mt-1">
+                    <Link href="/article" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002869] rounded-sm">
+                      <p className="font-[family-name:var(--font-public-sans)] text-sm font-semibold hover:text-[#002869] transition-colors line-clamp-2 text-[#1a1c1e]">
+                        {item.title}
+                      </p>
+                    </Link>
+                    <div className="text-[10px] text-slate-500 font-[family-name:var(--font-work-sans)] mt-1">
                       {item.timestamp} • {getReadTime(item.content)} min read
                     </div>
                   </div>
@@ -93,7 +96,7 @@ export function TrendingBento() {
               <p className="text-white/80 font-[family-name:var(--font-public-sans)] max-w-md">
                 Our citizens are our reporters. See the latest ground-level updates from Oghara, Sapele, and Ughelli.
               </p>
-              <button className="w-fit px-6 py-3 bg-white text-[#002869] font-[family-name:var(--font-work-sans)] font-bold rounded-lg hover:bg-[#dae2ff] transition-colors">
+              <button className="w-fit px-6 py-3 bg-white text-[#002869] font-[family-name:var(--font-work-sans)] font-bold rounded-lg hover:bg-[#dae2ff] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white">
                 Browse Community Reports
               </button>
             </div>
